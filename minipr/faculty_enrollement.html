@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" >
+ <link rel="stylesheet" href="adminstyles.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+<style>
+ .regform{
+        font-family:'Poppins', sans-serif;
+        width: 1000px;
+        background: #0A2558;
+        margin: auto;
+        color: #FFFFFF;
+        padding: 10px 0px 10px 0px;
+        text-align: center;
+        border-radius: 15px 15px 0px 0px;
+        font-size:20px;
+}
+.regform1{
+        font-family:'Poppins', sans-serif;
+        width: 1000px;
+        background-color: rgba(0, 0, 0, 0.8);
+        margin: auto;
+        color: #FFFFFF;
+        text-align: center;
+        border-radius:0px 0px 0px 0px;
+        font-size:18px;
+}
+.main{
+background-color: #0A2558;
+opacity: 0.8;
+font-family:'Poppins', sans-serif;
+width: 1000px;
+margin: auto;
+color: #FFFFFF;
+}
+     td{
+        padding: 8px 8px;
+        display: table-cell;
+        text-align: left;
+        vertical-align: top;
+        font-family:'Poppins', sans-serif;
+        color:white;
+        border-radius: 24px ;
+        font-weight:normal;
+     }
+    tr{
+        font-family:'Poppins', sans-serif;
+        color:white;
+        font-weight:bolder;
+    }
+
+
+    body{
+    
+    background-image: url("20210221_190017_0000.png") ;
+    background-attachment: fixed;  
+    background-size:cover;
+    background-position: center;
+    }
+
+    /*img{
+        width: 125px;
+        height: 125px;
+        ;
+    }*/
+    h2{
+        font-family:'Poppins', sans-serif;
+        font-size: 20px;
+        color:white;
+        
+    }
+    h3{
+        font-family:'Poppins', sans-serif;
+        color:white;
+        font-size: 30px;
+    }
+
+    h4{
+        font-family:'Poppins', sans-serif;
+        color:white;
+        font-size: 20px;
+    }
+    .email{
+position: relative;
+left: 200px;
+top: -37px;
+line-height: 40px;
+width: 480px;
+border-radius: 6px;
+padding: 0 22px;
+font-size: 16px;
+color: #555;
+}
+    /*.divClass {
+    border: 10px solid #fff8ff;/
+    /background-color:rgb(236, 219, 188);
+    }
+    .data{
+    /border: 10px solid rgb(236, 219, 188);/
+    /background-color: #fff8ff;/
+    }*/
+
+    .line{
+   height: 4px;
+   width: 510px;
+   border-radius: 6px;
+   position: absolute;
+   left: 30%;
+   top: 19%;
+   background: linear-gradient(to left,rgb(43, 190, 183),rgb(3, 44, 42));
+}
+.regform h1 span{
+ color: #319c8e;
+ font-weight: bolder;
+
+}
+.regform1 h2 span{
+ color:#319c8e ;
+ border-radius: 0px;
+ font-weight: bolder;
+
+}
+.name{
+ padding: 4px 20px;
+ border-radius: 6px;
+}
+.date{
+    padding: 4px 20px;
+    border-radius: 6px;
+   }
+.number{
+    padding: 4px 20px;
+    border-radius: 6px;
+   }
+   .number2{
+    padding: 4px;
+    border-radius: 6px;
+   }
+#email{
+    padding: 4px;
+    border-radius: 6px;
+}
+.address{
+    
+    font-family:'Poppins', sans-serif;
+        width: 1000px;
+        margin: auto;
+        color: #FFFFFF;
+        text-align: center;
+        border-radius:0px 0px 0px 0px;
+        font-size:20px;
+}
+ .name2{
+     padding: 4px;
+     border-radius: 6px;
+ }  
+    .buttonCls{
+       border-radius: 10px;
+       width: 250px;
+       height: 25px;
+       background-color:black;
+       color:white;
+       opacity: 0.7;
+       font-size:17px;
+    }
+    .button{
+        font-family:'Poppins', sans-serif;
+       border-radius: 10px;
+       width: 150px;
+       height: 25px;
+       background-color:#02c4fa;
+       color:rgb(0, 0, 0);
+       opacity: 10;
+       text-align:center;
+       font-size:18px;
+    }
+    .b{
+        border-radius: 10px;
+       width: 400px;
+       height: 25px;
+       background-color:black;
+       color:white;
+       opacity: 0.6;
+       font-size:18px;
+    }
+    .buttonCls{
+       border-radius: 10px;
+       width:200px;
+       height: 25px;
+       background-color:#003366;
+       color:white;
+       opacity: 0.5;
+       font-size:18px;
+    }
+</style>
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+ <title>Enrollment Form</title>
+ <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+</head>
+
+<body >
+    <div class="sidebar">
+        <div class="logo-details">
+          <i class='bx bxl-audible'></i>
+          <span class="logo_name"> Faculty Dashboard</span>
+        </div>
+          <ul class="nav-links">
+            <li>
+              <a href="faculty.html" >
+                <i class='bx bx-grid-alt' ></i>
+                <span class="links_name">Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class='bx bx-box' ></i>
+                <span class="links_name">View Leave Applicants</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class='bx bxs-user-pin'></i>
+                <span class="links_name">Profile</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="active">
+                <i class='bx bxs-user-detail'></i>
+                <span class="links_name">Edit Profile</span>
+              </a>
+            </li>
+			<li>
+              <a href="#">
+                <i class='bx bxs-add-to-queue'></i>
+                <span class="links_name">Apply Leave</span>
+              </a>
+            </li>
+			
+            <li class="log_out">
+              <a href="login.html">
+                <i class='bx bx-log-out'></i>
+                <span class="links_name">Log out</span>
+              </a>
+            </li>
+          </ul>
+      </div>
+      <section class="home-section">
+        <nav>
+          <div class="sidebar-button">
+            <i class='bx bx-menu sidebarBtn'></i>
+            <span class="dashboard" style="text-indent:300px;"> Leave Application management system </span>
+          </div>
+          <!-- <div class="search-box">
+            <input type="text" placeholder="Search...">
+            <i class='bx bx-search' ></i>
+          </div> -->
+          <div class="profile-details">
+            <!--<img src="images/profile.jpg" alt="">-->
+            <span class="admin_name">faculty_name</span>
+            <!-- <i class='bx bx-chevron-down' ></i> -->
+          </div>
+        </nav>
+        <pre></pre>
+        <pre></pre>
+        <pre></pre>
+        <pre></pre>
+        <pre></pre>
+        <pre></pre>
+
+<section >
+    <div class="regform"><h1>FACULTY ENROLLMENT</h1></div>
+
+    <div class="main">
+    <form action="##" method="post" enctype="multipart/form-data" >
+    <div class="regform1"><h2>FACULTY DETAILS</h2></div>
+            <div class="divClass">
+            <table>
+            
+                <tr>
+                   <td>First Name</td>
+                   <td><input type="text"  name="name" pattern="[a-zA-Z-' ]{1,}" required></td>
+				   <td></td>
+				   <td>Last Name</td>
+                   <td><input type="text"  name="name" pattern="[a-zA-Z-' ]{1,}" required></td>
+                </tr>
+                <tr>
+                    <td>Date of Birth</td>
+                    <td><input type="date" name="DOE" required></td>
+                </tr>
+				
+				<tr>
+                    <td>E-mail ID</td>
+                    <td><input type="email" id="email" name="E-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}" required></td>
+                </tr>
+				<tr>
+                    <td>Contact Number</td>
+                    <td><input type="tel" name="Contact_Number" pattern="[6-9]{1}[0-9]{9}" required></td>
+                    <td><input type="tel" name="Contact_Number2" pattern="[6-9]{1}[0-9]{9}"></td> 
+                </tr>
+				<tr>
+                        <td>LinkedIn UserId</td>
+                        <td><input type="text" name="LinkedIn_UserID" ></td>
+                        <td colspan="2"><input type="url" name="LinkedIn_URL" placeholder="Enter LinkedIn ID URL " pattern="https://.*" class="b"></td>
+                        
+                    </tr>
+           
+                
+                
+            </table>
+            </div>
+            
+            
+           <div class="divClass">
+                <table>
+                <div class="regform1"><h2>CONTACT DETAILS</h2></div>
+                <div class="address"><h4>PERMANENT ADDRESS</h4></div>
+                    <tr>
+                        <td >Door number</td>
+                        <td><input type="text" name="d_no" required></td>
+                        <td >Street Name</td>
+                        <td><input type="text" name="street"></td>
+                        <td >Colony</td>
+                        <td><input type="text" name="colony"></td>
+                    </tr>
+                    <tr>
+                        <td >Area</td>
+                        <td><input type="text" name="area" pattern="[a-zA-Z-' ]{1,}" required></td>
+                        <td >City</td>
+                        <td><input type="text" name="city" pattern="[a-zA-Z-' ]{1,}" required></td>
+                    </tr>
+                    <tr></tr>
+                        <td >State</td>
+                        <td><input type="text" name="state" pattern="[a-zA-Z-' ]{1,}" required></td>
+
+                        <td >Pin Code</td>
+                        <td><input type="int" name="pin" pattern="\d{4}|\d{6}" required></td>
+                    </tr>
+					
+                  
+                </table>
+
+            </div>
+			<div class="divClass">
+                <table>
+                <div class="address"><h4>TEMPORARY ADDRESS</h4></div>
+                    <tr>
+                        <td >Door number</td>
+                        <td><input type="text" name="d_no" required></td>
+                        <td >Street Name</td>
+                        <td><input type="text" name="street"></td>
+                        <td >Colony</td>
+                        <td><input type="text" name="colony"></td>
+                    </tr>
+                    <tr>
+                        <td >Area</td>
+                        <td><input type="text" name="area" pattern="[a-zA-Z-' ]{1,}" required></td>
+                        <td >City</td>
+                        <td><input type="text" name="city" pattern="[a-zA-Z-' ]{1,}" required></td>
+                    </tr>
+                    <tr></tr>
+                        <td >State</td>
+                        <td><input type="text" name="state" pattern="[a-zA-Z-' ]{1,}" required></td>
+
+                        <td >Pin Code</td>
+                        <td><input type="int" name="pin" pattern="\d{4}|\d{6}" required></td>
+                    </tr>
+					
+                  
+                </table>
+
+            </div>
+			
+            <div class="data">
+                <table>
+                <div class="regform1">OTHER INFORMATION</h2></div>
+                   
+					<tr>
+					<td>Martial Status</td>
+                   <td><input type="text"  name="status" pattern="[a-zA-Z-' ]{1,}" required></td>
+					<tr>
+					<td>Children</td>
+                   <td><input type="text"  name="number of children" pattern="{1,}"></td>
+					</tr>
+					<tr>
+					<td>Designation</td>
+                   <td><input type="text"  name="designation" pattern="[a-zA-Z-' ]{1,}"required></td>
+					</tr>
+					<tr>
+					<td>Experiance</td>
+                   <td><input type="text"  name="years of years" pattern="{1,}" required></td>
+					</tr>
+					<tr>
+					<td>Previous Instiute</td>
+                   <td><input type="text"  name="institute" pattern="[a-zA-Z-' ]{1,}"></td>
+					</tr>
+					<tr>
+                    <td>Photo</td>
+                    <td colspan="2"><input type ="file" value="upload" name="orphanage_photo" class="buttonCls"  required></td>
+                    </tr>
+                    <tr>
+                    <td>ID Proof (Aadhar Number)</td>
+                    <td><input type="text" maxlength="12" name="adhar_no" pattern="[0-9]{12}" required></td>
+                    <td colspan="2"><input type ="file" value="upload" name="id_proof" class="buttonCls" required></td>
+                    </tr>
+                    <tr>
+                    <td>Resume </td>
+                    <td colspan="2"><input type ="file" value="upload" name="resume" class="buttonCls"  required></td>
+                    </tr>
+                    
+        
+            <div class="divClass">
+                <table>
+                <div class="regform1"><h2>BANK DETAILS</h2></div>
+                    <tr>
+                        <td>Bank Name</td>
+                        <td><input type="text" name="bank_name" pattern="[a-zA-Z-' ]{1,}" required></td>
+                    </tr>
+                    <tr>
+                        <td>Branch</td>
+                        <td><input type="text" name="branch" pattern="[a-zA-Z-' ]{1,}" required></td>
+                    </tr>
+                    <tr>
+                        <td>Branch PINCODE</td>
+                        <td><input type="int" name="branch_code" pattern="\d{4}|\d{6}" required></td>
+                    </tr>
+                    <tr>
+                        <td>Account Number</td>
+                        <td><input onselectstart="return false" onpaste="return false;" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off type="text" name="acc" pattern="\d{1,16}" required></td>
+                    </tr>
+                    <tr>
+                        <td>Reenter Account Number</td>
+                        <td><input onselectstart="return false" onpaste="return false;" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off type="text" pattern="\d{1,16}" name="re_acc" required></td>
+                    </tr>
+                    <tr>
+                        <td>IFSC Code</td>
+                        <td><input onselectstart="return false" onpaste="return false;" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off type="text" name="IFSC" pattern="[A-Z]{4}0[A-Z0-9]{6}" required></td>
+                    </tr>
+                    <tr>
+                        <td>Reenter IFSC Code</td>
+                        <td><input onselectstart="return false" onpaste="return false;" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off type="text" name="re_IFSC" pattern="[A-Z]{4}0[A-Z0-9]{6}" required></td>
+                    </tr>
+                    <tr>
+                        <td>Phone Number</td>
+                        <td><input onselectstart="return false" onpaste="return false;" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off type="text" name="UPI" pattern="[6-9]{1}[0-9]{9}" required></td>
+                    </tr>
+                    <tr>
+                        <td>Reenter Phone Number</td>
+                        <td><input onselectstart="return false" onpaste="return false;" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off type="text" name="re_UPI" pattern="[6-9]{1}[0-9]{9}" required></td>
+                    </tr>
+                    
+                    
+                </table>
+            </div>
+            <div class="data">
+                    <table align="center">
+					<tr></tr>
+					<tr></tr>
+					<tr></tr>
+
+                     <tr>
+                        <td colspan="2" >
+                        <input type="submit"  value="SAVE & SUBMIT" name="submit" class="button" ></td>
+                            
+                     </tr>
+                </table>
+            </div>
+        </form>
+</div>
+</section>
+
+<script>
+    let sidebar = document.querySelector(".sidebar");
+ let sidebarBtn = document.querySelector(".sidebarBtn");
+ sidebarBtn.onclick = function() {
+   sidebar.classList.toggle("active");
+   if(sidebar.classList.contains("active")){
+   sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+ }else
+   sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+ }
+  </script>
+    
+</body>
+</html>

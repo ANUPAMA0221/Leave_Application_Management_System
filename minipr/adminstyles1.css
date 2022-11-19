@@ -1,0 +1,59 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+   }
+   
+   #header {
+       float: left;
+     }
+   
+   #title {
+       text-align:center;font-weight: bold;font-size: 25px;
+   }
+     
+   .content {
+       max-width: 35%;margin: auto;margin-top: 20px;
+       margin-bottom: 20px;padding: 10px;
+       background: #0A2558;border: 1px solid gainsboro;
+       border-style: ridge;border-radius: 25px;
+       text-align:center;
+     }
+   
+   #date{
+     font-size: 17px;font-weight: bold;
+   }
+   
+   #day{
+     font-size: 17px;font-weight: bold;
+   }
+   
+   #btnsave{
+     margin-right: 50px;
+   }
+   
+   .datetable {
+     max-width: 35%;
+     margin: auto;
+     text-align: center;
+     overflow-x:hidden;
+     overflow-y:auto;
+     height:500px;
+     display:block;
+   }
+   
+   h3{
+     text-align:center;
+   }
+   
+   #tblHolidays{
+     width:100%;
+   }
+   
+   #tblHolidays th,#tblHolidays td{
+     border: 1px solid black;
+     padding: 5px!important;
+   }
+   
+   select {
+     color: rgb(0, 0, 0)!important;
+   }
+   

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="adminstyles.css">
+    <link rel="stylesheet" href="adminstyles1.css">
+    <!-- Boxicons CDN Link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    
+      <script src = "https://code.jquery.com/jquery-1.12.4.js"></script>
+      <script src = "https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+
+<body >
+    <div class="sidebar">
+        <div class="logo-details">
+          <i class='bx bxl-audible'></i>
+          <span class="logo_name"> Admin Dashboard</span>
+        </div>
+          <ul class="nav-links">
+            <li>
+              <a href="admin.html" >
+                <i class='bx bx-grid-alt' ></i>
+                <span class="links_name">Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class='bx bx-box' ></i>
+                <span class="links_name">View Leave Applicants</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="active">
+                <i class='bx bx-calendar' ></i>
+                <span class="links_name">Calender</span>
+              </a>
+            </li>
+            <li>
+              <a href="semester.html">
+                <i class='bx bx-pie-chart-alt-2' ></i>
+                <span class="links_name">Semester</span>
+              </a>
+            </li>
+            <li class="log_out">
+              <a href="login.html">
+                <i class='bx bx-log-out'></i>
+                <span class="links_name">Log out</span>
+              </a>
+            </li>
+          </ul>
+      </div>
+      <section class="home-section">
+        <nav>
+          <div class="sidebar-button">
+            <i class='bx bx-menu sidebarBtn'></i>
+            <span class="dashboard" style="text-indent:300px;"> Leave Application management system </span>
+          </div>
+          <!-- <div class="search-box">
+            <input type="text" placeholder="Search...">
+            <i class='bx bx-search' ></i>
+          </div> -->
+          <div class="profile-details">
+            <!--<img src="images/profile.jpg" alt="">-->
+            <span class="admin_name">Admin</span>
+            <!-- <i class='bx bx-chevron-down' ></i> -->
+          </div>
+        </nav>
+        <pre></pre>
+        <pre></pre>
+        <pre></pre>
+        <div class = "content">
+            <br/>
+        <p style="color:#ffffff ;" id = title>Holidays</p>
+        <br/> 
+    <div style="color:#ffffff ;" id = date>
+    <p> Choose Date of Holiday : <input type="text" style="color:#000000;" id="datepicker" name= 'date' size = 19 required readonly><i class="date-icon fa fa-calendar" aria-hidden="true"></i></p>
+    </div>
+    <br/> 
+    <div style="color:#ffffff ;" id = day>
+        <p>Day of week on Holiday : <input type="text" style="color:#000000;" name= 'day' size="20" id="txtDayOfWeek" required></p>
+        </div>
+    <br/>
+    <div style="color:#ffffff ;" id = day>
+      <p>Reason of Holiday  :<br/> <input type="text" style="color:#000000;" name= 'reason' size="20" id="reasonofHoliday" required></p>
+      </div>
+      <br/>
+    <button id="btnsave" class="btn btn-success">Save Holiday</button>
+    <button id="btncancel" class="btn btn-warning">Cancel</button>
+    <br/>
+    </div>
+    </form>
+    <br/>
+        <h3> Holidays already entered</h3>
+        <div class = "datetable">
+        <table id = 'tblHolidays'>
+            <tr>
+                <th class="text-center">Date</th>  
+                <th class="text-center">Day</th>
+                <th class="text-center">Reason</th>
+                <th class="text-center">Action</th>
+            </tr>
+        </table>
+    </div>
+
+
+
+        <script>
+            let sidebar = document.querySelector(".sidebar");
+         let sidebarBtn = document.querySelector(".sidebarBtn");
+         sidebarBtn.onclick = function() {
+           sidebar.classList.toggle("active");
+           if(sidebar.classList.contains("active")){
+           sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+         }else
+           sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+         }
+         
+          </script>
+          <script>
+                    $( function() {
+          $( "#datepicker" ).datepicker({
+            // showOn: "button",
+            // buttonImage: "https://i.imgur.com/0CxtPo4.png",
+            // buttonImageOnly: true,
+            // buttonText: "Select date",
+            changeMonth: true,
+            changeYear: true,
+            altField: "#txtDayOfWeek",
+            altFormat: "DD"
+          });
+          $('.date-icon').on('click', function() {
+        $('#datepicker').focus();
+      })
+          
+          $("#btnsave").click(function(e){
+            e.preventDefault();
+            var newRow = "<tr><td>" +  $( "#datepicker" ).val() +"</td><td>" +  $( "#txtDayOfWeek" ).val() +"</td><td>" +  $( "#reasonofHoliday" ).val() +"</td><td><button class='btn btn-danger'>Delete</button></td></tr>";
+            $("#tblHolidays").append(newRow);
+          });
+          
+           $("#btncancel").click(function(e){
+            e.preventDefault();
+            $( "#datepicker" ).val("");
+            $( "#txtDayOfWeek" ).val(""); 
+            $( "#reasonofHoliday" ).val("");
+         });
+          
+         $(document).on("click",".btn-danger",function(e){
+            e.preventDefault();
+             $(this).closest("tr").remove();         
+         });
+          
+    });
+
+ 
+          </script>
+  </body>

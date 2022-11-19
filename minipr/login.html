@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+</head>
+<body>
+  
+<div class="left">
+    <h1>Welcome</h1>
+    <div class="separator"></div>
+    <form  id="form_id" method="post" name="myform">
+      <fieldset>
+          <label for="username">Username or Email</label>
+          <input type="text" name="username" id="username">
+          <label for="passowrd">Password</label>
+          <input type="password"name="password" id="password">
+          <a href="#">Forgot your password?</a>
+          <button class="primaryBtn" id="submit" onclick="return validate()">Login</button>
+        </fieldset>
+    </form>
+   </div>
+   <div class="right"></div>
+<script>
+  function validate(){
+var username = document.getElementById("username").value;
+var password = document.getElementById("password").value;
+if ( username == "Admin" && password == "Admin123"){
+alert ("Login successfully");
+window.location = "admin.html"; // Redirecting to other page.
+return false;
+}
+else if( username == "Faculty" && password == "Faculty123"){
+  alert ("Login successfully");
+window.location = "faculty.html"; // Redirecting to other page.
+return false;
+}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Italiana&display=swap');
+/* font-family: 'Cormorant Garamond', serif;
+   font-family: 'Italiana', serif; */
+*{
+  box-sizing: border-box;
+ }
+
+body {
+   min-height: 100vh; 
+   /*flex*/
+   display: flex;
+   justify-content: stretch;
+   align-items: center;
+   background-color: #0A2558;
+ }
+h1 {
+  font-size: 48px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  margin-bottom: 64px;
+  color: #ffffff;
+  }
+
+span, label, button, a {
+  font-family:  'Poppins', sans-serif;
+  color: #ffffff;
+  }
+  input {
+    font-family:  'Poppins', sans-serif;
+    color: #000000;
+    font-size: large;
+    font-weight: 500;
+  }
+a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 8px;
+  /*flex*/
+  display: flex;  
+  justify-content: flex-end;
+  }
+
+fieldset {
+  border: none;
+  /*flex*/
+  display: flex;
+  flex-direction: column;
+  }
+
+ label {
+   font-size: 18px;
+   font-weight: 600;
+   }
+
+fieldset input:first-of-type {
+  margin: 8px 0px 40px;
+  }
+
+input {
+  width: 100%;
+  height: 40px;
+  border: none;
+  background-color: #ffffff;
+  border-radius: 10px;
+  /*flex*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+button {
+  width: 192px;
+  height: 48px;
+  border: none;
+  background-color: transparent;
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 20px;
+  border-radius: 10px;
+  }
+
+.left {
+  width: 35%;
+  padding: 24px;
+}
+
+.right {
+  width: 65%;
+  height: 100vh;
+  background-image: url(https://media.istockphoto.com/id/1368151370/photo/user-typing-login-and-password-cyber-security-concept.jpg?b=1&s=170667a&w=0&k=20&c=wm6YUMs03Bup4_9XcQaX61L711qJxAUExEJp_PWO8gI=); 
+  background-size: cover;
+  background-position: center; /* Picture credits: Rodion Kutsaiev: https://www.pexels.com/es-es/foto/ligero-arte-abstracto-arquitectura-7911758/ */
+  }
+
+.primaryBtn {
+  color: #ffffff;
+  background-color: #02c4fa;
+  margin: 40px auto 56px;
+  }
+
+.primaryBtn:hover {
+  background-color: #14131e;
+  }
+
+.separator {
+  width: 100%;
+  height: 1px;
+  margin: 0px auto 56px; 
+  background-color: #ffffff;
+  }
+
+span {
+  font-size: 18px;
+  font-weight: 700;
+  /*flex*/
+  display: flex;
+  justify-content: center;
+  }
+
+.secondaryBtn {
+  color: #554A3D;
+  border: 1px solid #85A2AB;
+  margin: 8px auto;
+  }
+
+.secondaryBtn:hover {
+  color: #516369;
+  border-color: #516369;
+  }
