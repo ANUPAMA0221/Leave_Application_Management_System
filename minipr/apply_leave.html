@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="adminstyles.css">
+    <link rel="stylesheet" href="apply_leave.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body >
+    <div class="sidebar">
+        <div class="logo-details">
+          <i class='bx bxl-audible'></i>
+          <span class="logo_name"> Faculty Dashboard</span>
+        </div>
+          <ul class="nav-links">
+            <li>
+              <a href="faculty.html"  >
+                <i class='bx bx-grid-alt' ></i>
+                <span class="links_name">Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class='bx bx-box' ></i>
+                <span class="links_name">View Leave Applicants</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class='bx bxs-user-pin'></i>
+                <span class="links_name">Profile</span>
+              </a>
+            </li>
+            <li>
+              <a href="faculty_enrollement.html">
+                <i class='bx bxs-edit' ></i>
+                <span class="links_name">Edit Profile</span>
+              </a>
+            </li>
+			<li>
+              <a href="#" class="active">
+                <i class='bx bxs-add-to-queue'></i>
+                <span class="links_name">Apply Leave</span>
+              </a>
+            </li>
+			
+            <li class="log_out">
+              <a href="login.html">
+                <i class='bx bx-log-out'></i>
+                <span class="links_name">Log out</span>
+              </a>
+            </li>
+          </ul>
+      </div>
+      <section class="home-section">
+        <nav>
+          <div class="sidebar-button">
+            <i class='bx bx-menu sidebarBtn'></i>
+            <span class="dashboard" style="text-indent:300px;"> Leave Application Management System </span>
+          </div>
+          <!-- <div class="search-box">
+            <input type="text" placeholder="Search...">
+            <i class='bx bx-search' ></i>
+          </div> -->
+          <div class="profile-details">
+            <!--<img src="images/profile.jpg" alt="">-->
+            <span class="admin_name">faculty_name</span>
+            <!-- <i class='bx bx-chevron-down' ></i> -->
+          </div>
+        </nav>
+        <pre></pre>
+        <pre></pre>
+        <pre></pre>
+        <pre></pre>
+        <pre></pre>
+        <pre></pre>
+        <form>
+            <h2 style="color: white;">Leave Application Form</h2>
+            <div class="large-group">
+                <div class="small-group">
+                    <label style="color: white;" for="firstname">First Name:</label>
+                    <input id="firstname" type="text" name="firstname" required/>
+                </div>
+                
+                <div class="small-group">
+                    <label style="color: white;" for="lastname">Last Name:</label>
+                    <input for="lastname" type="text" name="lastname" required/>
+                </div>
+          
+          <div class="small-group">
+                    <label style="color: white;" for="dept">Department:</label>
+            <select required> 
+              <option value="" disabled selected>Select department:</option>
+                        <option value="1">Foundation & General Studies</option>
+                        <option value="2">Engineeing & Computing</option>
+              <option value="3">Interior Design</option>
+              <option value="4">Business</option>
+              <option value="5">Mass Communication</option>
+              <option value="6">Education</option>
+              <option value="2">Law</option>
+              </select> <br>
+                </div>
+          
+          <div class="small-group">
+                    <label style="color: white;" for="designation">Designation:</label>
+                    <input for="designation" type="text" name="designation" required/>
+                </div>
+          
+                <div class="small-group">
+                    <label style="color: white;" for="email">Email Address:</label>
+                    <input id="email" type="email" name="email" required/>
+                </div>
+          
+          <div class="small-group">
+                    <label style="color: white;" for="adress">Contact Address:</label>
+                    <input id="address" type="text" name="address" required/>
+                </div>
+                
+                <div class="small-group">
+                    <label style="color: white;" for="phonenumber">Phone Number:</label>
+                    <input id="phonenumber" type="tel" name="phonenumber" required/>
+                </div>
+                
+          <div class="small-group">
+                    <label style="color: white;" for="phonenumber">Alternate/Emergency Phone Number:</label>
+                    <input id="phonenumber" type="tel" name="phonenumber" required/>
+                </div>
+          
+          <div class="textarea-div">
+                    <label style="color: white;" for="others2">Type of Leave:</label>
+            <select required name="others2" onchange='Others2(this.value);'> 
+              <option value="" disabled selected>Select type of leave:</option>
+                        <option value="Annual">Annual</option>
+                        <option value="Sick">Sick</option>
+              <option value="mp">Maternity/Paternity</option>
+                        <option value="Other2">Other (Please Specify Below)</option>
+              </select><br>
+           <input type="text" name="others2" id="others2" style='display:none;' required/>
+                </div>
+          
+          <div class="small-group">
+                    <label style="color: white;" for="start">Leave Start Date:</label>
+                    <input id="start" type="date" name="start" required/>
+                </div>
+          
+          <div class="small-group">
+                    <label style="color: white;" for="end">Leave End Date:</label>
+                    <input id="end" type="date" name="end" required/>
+                </div>
+          
+          <div class="small-group">
+                    <label style="color: white;" for="from">Departure From:</label>
+                    <input id="from" type="date" name="from" required/>
+                </div>
+          
+          <div class="small-group">
+                    <label style="color: white;" for="to">Arrival On:</label>
+                    <input id="to" type="date" name="to" required/>
+                </div>
+          
+                <div class="textarea-div">
+                    <label style="color: white;" for="reason">Reason for Leave:</label>
+                    <textarea id="reason" type="text" name="reason" required></textarea>
+                    <pre></pre>
+                </div>
+                
+                    <input style="color:white ;" id="submit" class="btn" type="submit" name="submit"/>
+    
+            </div>
+        </form>
+        <script>
+            function Others2(val){
+ var element=document.getElementById('others2');
+ if(val=='Type of Leave'||val=='Other2')
+   element.style.display='block';
+ else  
+   element.style.display='none';
+}
+        </script>
+                <script>
+                    let sidebar = document.querySelector(".sidebar");
+                 let sidebarBtn = document.querySelector(".sidebarBtn");
+                 sidebarBtn.onclick = function() {
+                   sidebar.classList.toggle("active");
+                   if(sidebar.classList.contains("active")){
+                   sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+                 }else
+                   sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+                 }
+                  </script>

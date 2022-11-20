@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!--<title> Responsiive Admin Dashboard | CodingLab </title>-->
+    <link rel="stylesheet" href="adminstyles.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bxl-audible'></i>
+      <span class="logo_name"> Admin Dashboard</span>
+    </div>
+      <ul class="nav-links">
+        <li>
+          <a href="#" class="active">
+            <i class='bx bx-grid-alt' ></i>
+            <span class="links_name">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx bx-box' ></i>
+            <span class="links_name">View Leave Applicants</span>
+          </a>
+        </li>
+        <form action="admin.html" method="POST">
+        <li>
+          <a href="calender.html">
+            <i class='bx bx-calendar' ></i>
+            
+            <span class="links_name">Calender</span>
+          
+          </a>
+        </li>
+      </form>
+        <li>
+          <a href="semester.html">
+            <i class='bx bx-pie-chart-alt-2' ></i>
+            <span class="links_name">Semester</span>
+          </a>
+        </li>
+        <li class="log_out">
+          <a href="login.html">
+            <i class='bx bx-log-out'></i>
+            <span class="links_name">Log out</span>
+          </a>
+        </li>
+      </ul>
+  </div>
+  <section class="home-section">
+    <nav>
+      <div class="sidebar-button">
+        <i class='bx bx-menu sidebarBtn'></i>
+        <span class="dashboard">Leave Application Management System </span>
+      </div>
+      <div class="search-box">
+        <input type="text" placeholder="Search...">
+        <i class='bx bx-search' ></i>
+      </div>
+      <div class="profile-details">
+        <!--<img src="images/profile.jpg" alt="">-->
+        <span class="admin_name">Admin</span>
+        <!-- <i class='bx bx-chevron-down' ></i> -->
+      </div>
+    </nav>
+
+    <pre></pre>
+        <pre></pre>
+        <pre></pre>
+        <pre></pre>
+        <pre></pre>
+        <pre></pre>
+
+    <user-card name="John Doe" avatar="https://randomuser.me/api/portraits/men/1.jpg">
+        <div slot="email">johndoe@gmail.com</div>
+        <div slot="phone">555-555-5555</div>
+      </user-card>
+      <user-card name="Jane Doe" avatar="https://randomuser.me/api/portraits/women/1.jpg">
+        <div slot="email">janedoe@gmail.com</div>
+        <div slot="phone">333-333-3333</div>
+      </user-card>
+      <user-card name="Jane Doe" avatar="https://randomuser.me/api/portraits/women/1.jpg">
+        <div slot="email">janedoe@gmail.com</div>
+        <div slot="phone">333-333-3333</div>
+      </user-card>
+      <user-card name="Jane Doe" avatar="https://randomuser.me/api/portraits/women/1.jpg">
+        <div slot="email">janedoe@gmail.com</div>
+        <div slot="phone">333-333-3333</div>
+      </user-card>
+      <user-card name="Jane Doe" avatar="https://randomuser.me/api/portraits/women/1.jpg">
+        <div slot="email">janedoe@gmail.com</div>
+        <div slot="phone">333-333-3333</div>
+      </user-card>
+      <user-card name="Jane Doe" avatar="https://randomuser.me/api/portraits/women/1.jpg">
+        <div slot="email">janedoe@gmail.com</div>
+        <div slot="phone">333-333-3333</div>
+      </user-card>
+</section>
+
+<script>
+    let sidebar = document.querySelector(".sidebar");
+ let sidebarBtn = document.querySelector(".sidebarBtn");
+ sidebarBtn.onclick = function() {
+   sidebar.classList.toggle("active");
+   if(sidebar.classList.contains("active")){
+   sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+ }else
+   sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+ }
+  </script>
+
+  <script>
+    const template = document.createElement('template');
+template.innerHTML = `
+  <style>
+  .user-card {
+		font-family: 'Arial', sans-serif;
+		background: #f4f4f4;
+		width: 500px;
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		grid-gap: 10px;
+		margin-bottom: 15px;
+		border-bottom: darkorchid 5px solid;
+	}
+
+	.user-card img {
+		width: 100%;
+	}
+
+	.user-card button {
+		cursor: pointer;
+		background: darkorchid;
+		color: #fff;
+		border: 0;
+		border-radius: 5px;
+		padding: 5px 10px;
+	}
+  </style>
+  <div class="user-card">
+    <img />
+    <div>
+      <h3></h3>
+      <div class="info">
+        <p><slot name="email" /></p>
+        <p><slot name="phone" /></p>
+      </div>
+      <button id="toggle-info">Hide Info</button>
+    </div>
+  </div>
+`;
+
+class UserCard extends HTMLElement {
+  constructor() {
+    super();
+
+    this.showInfo = true;
+
+    this.attachShadow({ mode: 'open' });
+    this.shadowRoot.appendChild(template.content.cloneNode(true));
+    this.shadowRoot.querySelector('h3').innerText = this.getAttribute('name');
+    this.shadowRoot.querySelector('img').src = this.getAttribute('avatar');
+  }
+
+  toggleInfo() {
+    this.showInfo = !this.showInfo;
+
+    const info = this.shadowRoot.querySelector('.info');
+    const toggleBtn = this.shadowRoot.querySelector('#toggle-info');
+
+    if(this.showInfo) {
+      info.style.display = 'block';
+      toggleBtn.innerText = 'Hide Info';
+    } else {
+      info.style.display = 'none';
+      toggleBtn.innerText = 'Show Info';
+    }
+  }
+
+  connectedCallback() {
+    this.shadowRoot.querySelector('#toggle-info').addEventListener('click', () => this.toggleInfo());
+  }
+
+  disconnectedCallback() {
+    this.shadowRoot.querySelector('#toggle-info').removeEventListener();
+  }
+}
+
+window.customElements.define('user-card', UserCard);
+  </script>
+
+</body>
+</html>
